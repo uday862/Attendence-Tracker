@@ -1,29 +1,61 @@
-import { useContext } from "react"
-import { assets } from "../assets/assets"
-import { AppContext } from "../context/AppContext"
 
-const Header = () => {
+import React, { useState, useEffect } from 'react';
+import { AppBar, Toolbar, Typography, Button, Container, Box, Accordion, AccordionSummary, AccordionDetails, List, ListItem, ListItemText } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import RefreshIcon from '@mui/icons-material/Refresh';
+import LogoutIcon from '@mui/icons-material/Logout';
+import { useLocation ,useNavigate} from 'react-router-dom';
+import Dash from './Dash'
+import axios from 'axios';
 
-  const {userData} = useContext(AppContext)
 
-  return (
-    <div className="flex flex-col items-center mt-20 px-4 text-center text-gray-800">
+const Dashboard = () => {
+  const [userData, setUserData] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+const navigate=useNavigate();
+  const location = useLocation();
+  const username = location?.state?.username;
 
-      <img src={assets.header_img} alt="" className="w-36 h-36 rounded-full mb-6"/>
+  // Fetch data based on the username
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        if (username) {
+          const response = await axios.get(`http://localhost:5000/api/user/data?username=${username}`);
+          setUserData(response.data);
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+    fetchUserData();
+  }, [username]);
 
-      <h1 className="flex items-center gap-2 text-xl sm:text-3xl font-medium mb-2">
-        Hey {userData ? userData.name : 'Developer'}!
-        <img src={assets.hand_wave} alt="" className="w-8 aspect-square"/>
-      </h1>
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+    const handleLogout = () => {
+      localStorage.removeItem('authToken');
+      navigate('/login');
+    };
+    const toggleDropdown = (index) => {
+      setDropdownOpen(dropdownOpen === index ? null : index);
+    };
 
-      <h2 className="text-center sm:text-5xl text-3xl mb-4 gap-2 font-semibold">Welcome to our App</h2>
+    const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+    };
 
-      <p className="mb-8 max-w-md">hagjhksjgldkhgfldsjhvgdvdh sg s rhs hr gsr th strkh keh g r hak hsth aetm hath s ha t</p>
+    
 
-      <button className="border border-gray-500 rounded-full px-8 py-2.5 hover:bg-gray-100 transition-all">Get Started</button>
+    return (
+      
+     
+        <h1>Dashboard</h1>
+        
+       );
+  };
 
-    </div>
-  )
-}
-
-export default Header
+  export default Dashboard;
