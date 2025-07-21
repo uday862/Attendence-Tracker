@@ -14,7 +14,7 @@ Attendance-Tracker/
 
 ## 🚀 How to Run the Project
 
-### 1. Start Flask Backend (YOLO + Face Recognition)
+
 
 
 1.cd backend,
