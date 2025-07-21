@@ -45,13 +45,14 @@ Attendance-Tracker/
  Ensure you have all dependencies installed (npm install, pip install -r requirements.txt) in the respective folders.
 
 🧠 Tech Stack
+```bash
 Layer	Technology
 Frontend	React.js
 Middleware	Node.js + Express
 Backend (AI)	Python + Flask + OpenCV + YOLOv8
 Database	MongoDB
 Face Recognition	face_recognition or deepface
-
+```
 🛠️ Features
 ✅ Real-time face detection using YOLOv8
 ✅ Admin and Teacher dashboards
