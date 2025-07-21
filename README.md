@@ -16,8 +16,7 @@ Attendance-Tracker/
 
 
 
-
-1.cd backend,
+>> cd client
 >>python app.py
 
 >>Start React Frontend
@@ -97,6 +96,8 @@ Node.js
 
 MongoDB Docs
 
+
+if any problem please free to text me on gadigeuday111@gmail.com 
 
 
 
