@@ -113,6 +113,25 @@ Node.js
 
 MongoDB Docs
 
+```bash
+Environment Setup (⚠️ Must Do Before Running the Project)
+🧠 Important: You must create a .env file inside the server/ directory before running the Node.js server.
+
+This file stores sensitive configuration like your MongoDB URI and JWT secret key.
+
+✅ Steps:
+Navigate to the server directory:
+
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_custom_jwt_secret_key
+Replace:
+
+your_mongodb_connection_string with your MongoDB Atlas connection URI
+
+your_custom_jwt_secret_key with a secure secret key for JWT authentication
+
+universitycode : CODE123 FOR ADMIN ONLY 
+```
 
 if any problem please free to text me on gadigeuday111@gmail.com 
 
