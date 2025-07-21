@@ -46,13 +46,14 @@ Attendance-Tracker/
 
 🧠 Tech Stack
 ```bash
-Layer	Technology
+        Layer	Technology
 Frontend	React.js
 Middleware	Node.js + Express
 Backend (AI)	Python + Flask + OpenCV + YOLOv8
 Database	MongoDB
 Face Recognition	face_recognition or deepface
 ```
+```bash
 🛠️ Features
 ✅ Real-time face detection using YOLOv8
 ✅ Admin and Teacher dashboards
@@ -61,7 +62,8 @@ Face Recognition	face_recognition or deepface
 ✅ Attendance data stored securely in MongoDB
 ✅ Reports exportable in CSV format
 ✅ WebSocket support for real-time updates
-
+```
+```bash
 📸 Architecture Overview
 User uploads video 
 
@@ -74,14 +76,16 @@ YOLOv8 + OpenCV detect and recognize faces
 Matches are logged in MongoDB
 
 Live results sent back to React UI via WebSockets
-
+```
+```bash
 📚 Future Enhancements
 📱 Mobile App (Android/iOS)
 
 📊 Advanced Analytics Dashboard
 
-🧠 Student attentiveness detection
 
+```
+```bash
 👨‍💻 Developers
 
 Uday Kumar - 23BD1A0527
@@ -99,7 +103,7 @@ Mentors:
 Mr. Seshu
 
 Ms. Arti
-
+```
 📎 References
 YOLOv5 by Ultralytics
 
