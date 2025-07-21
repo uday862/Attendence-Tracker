@@ -6,30 +6,42 @@ An AI-powered attendance management system combining **YOLO-based facial recogni
 
 ## 📦 Project Structure
 
+```bash 
 Attendance-Tracker/
 ├── client/ # React.js frontend
 ├── backend/ # Flask + OpenCV + YOLOv8
 ├── server/ # Node.js middleware
+```
 
 
 ## 🚀 How to Run the Project
 
 
+1. **Run the Flask API: yolo model**
+   ```bash
+   cd client
+   cd backend
+   python app.py 
+   ```
 
->> cd client
->>python app.py
+2. **Run the Backend Server:**
+3. open another terminal 
+   ```bash
+   cd server 
+   node server.js
+   ```
 
->>Start React Frontend
->>Open a new terminal:,
->>cd client,
->>npm run dev 
+4. **Run the Frontend:**
+5. another terminal 
+   ```bash
+   cd client
+   npm run dev 
+   ```
 
-
->>Start Node.js Server (Middleware)
->>Open another terminal:,
->>cd server,
->>node server.js      
-
+6. **Access the Application:**
+   ```
+   http://localhost:3000/
+   ```
  Ensure you have all dependencies installed (npm install, pip install -r requirements.txt) in the respective folders.
 
 🧠 Tech Stack
