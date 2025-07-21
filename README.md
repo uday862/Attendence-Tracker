@@ -17,18 +17,18 @@ Attendance-Tracker/
 ### 1. Start Flask Backend (YOLO + Face Recognition)
 
 
-1.cd backend
+1.cd backend,
 >>python app.py
 
 >>Start React Frontend
->>Open a new terminal:
->>cd client
+>>Open a new terminal:,
+>>cd client,
 >>npm run dev 
 
 
 >>Start Node.js Server (Middleware)
->>Open another terminal:
->>cd server
+>>Open another terminal:,
+>>cd server,
 >>node server.js      
 
  Ensure you have all dependencies installed (npm install, pip install -r requirements.txt) in the respective folders.
